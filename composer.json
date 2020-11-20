@@ -28,6 +28,30 @@
       "type": "composer",
       "url": "https://wpackagist.org",
       "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
+    },
+    {
+      "type":"package",
+      "package": {
+        "name": "wp-graphql-meta-query/wp-graphql-meta-query",
+        "version": "0.1.1",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url":"packages/wp-graphql-meta-query-0.1.1.zip"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "advanced-custom-fields/advanced-custom-fields-pro",
+        "version": "5.9.3",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%PLUGIN_ACF_KEY}&t={%VERSION}"
+        }
+      }
     }
   ],
   "require": {
@@ -35,11 +59,17 @@
     "composer/installers": "^1.8",
     "vlucas/phpdotenv": "^4.1.8",
     "oscarotero/env": "^2.1",
+    "ffraenz/private-composer-installer": "^5.0",
     "roots/bedrock-autoloader": "^1.0",
     "roots/wordpress": "5.5.3",
     "roots/wp-config": "1.0.0",
-    "roots/wp-password-bcrypt": "1.0.0"
-  },
+    "roots/wp-password-bcrypt": "1.0.0",
+    "advanced-custom-fields/advanced-custom-fields-pro": "*",
+    "wp-graphql/wp-graphql": "1.0",
+    "wp-graphql/wp-graphql-acf": "0.4.0",
+    "wp-graphql-meta-query/wp-graphql-meta-query": "*",
+    "wp-graphql/wp-graphql-jwt-authentication": "*"
+},
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.5.6",
     "roave/security-advisories": "dev-master"
