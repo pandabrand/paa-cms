@@ -42,6 +42,30 @@
       }
     },
     {
+      "type":"package",
+      "package": {
+        "name": "wpai/wp-all-import-pro",
+        "version": "4.6.5",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url":"packages/wp-all-import-pro_4.6.5.zip"
+        }
+      }
+    },
+    {
+      "type":"package",
+      "package": {
+        "name": "wpai/wpai-acf-add-on",
+        "version": "3.2.9",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url":"packages/wpai-acf-add-on_3.2.9.zip"
+        }
+      }
+    },
+    {
       "type": "package",
       "package": {
         "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -52,6 +76,10 @@
           "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%PLUGIN_ACF_KEY}&t={%VERSION}"
         }
       }
+    },
+    {
+      "type":"vcs",
+      "url":"git@github.com:pandabrand/pleinair-fww.git"
     }
   ],
   "require": {
@@ -68,8 +96,12 @@
     "wp-graphql/wp-graphql": "1.0",
     "wp-graphql/wp-graphql-acf": "0.4.0",
     "wp-graphql-meta-query/wp-graphql-meta-query": "*",
-    "wp-graphql/wp-graphql-jwt-authentication": "*"
-},
+    "wp-graphql/wp-graphql-jwt-authentication": "*",
+    "frederickwells/pleinair-fww":"0.0.3",
+    "wpai/wp-all-import-pro":"4.6.5",
+    "wpai/wpai-acf-add-on":"3.2.9",
+    "wpackagist-plugin/do-spaces-sync":"2.2.1"
+  },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.5.6",
     "roave/security-advisories": "dev-master"
