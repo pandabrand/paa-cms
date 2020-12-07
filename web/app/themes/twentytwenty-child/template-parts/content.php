@@ -49,7 +49,7 @@
             <p class="location"><?php echo $location[0]->name; ?></p>
           </div>
           <div class="carousel" data-flickity='{"wrapAround": true }'>
-            <?php foreach ($images as $image) : ?>
+            <?php foreach ($images as $image) : write_log($image); ?>
               <div class="image"><?php echo wp_get_attachment_image($image[0], 'large'); ?></div>
             <?php endforeach; ?>
           </div>

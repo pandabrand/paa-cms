@@ -8,3 +8,12 @@
     wp_enqueue_style('flickity-style', 'https://unpkg.com/flickity@2/dist/flickity.min.css');
     wp_enqueue_script('flickity-script', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js', array(), null);
   }
+
+  function write_log( $log )
+  {
+      if ( is_array( $log ) || is_object( $log ) ) {
+          error_log( print_r( $log, true ) );
+      } else {
+          error_log( $log );
+      }
+  }
