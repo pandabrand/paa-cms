@@ -48,8 +48,8 @@
             <p class="date"><?php echo $date; ?></p>
             <p class="location"><?php echo $location[0]->name; ?></p>
           </div>
-          <div class="carousel" data-flickity='{"wrapAround": true }'>
-            <?php foreach ($images as $image) : write_log($image); ?>
+          <div class="carousel" data-flickity='{ "lazyLoad": true, "percentPosition": false }'>
+            <?php foreach ($images as $image) :?>
               <div class="image"><?php echo wp_get_attachment_image($image['image'], 'large'); ?></div>
             <?php endforeach; ?>
           </div>
