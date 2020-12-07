@@ -50,7 +50,7 @@
           </div>
           <div class="carousel" data-flickity='{"wrapAround": true }'>
             <?php foreach ($images as $image) : ?>
-              <div class="image"><?php echo wp_get_attachment_image($image, 'large'); ?></div>
+              <div class="image"><?php echo wp_get_attachment_image($image[0], 'large'); ?></div>
             <?php endforeach; ?>
           </div>
         <?php
