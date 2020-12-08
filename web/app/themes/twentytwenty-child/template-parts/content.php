@@ -37,23 +37,23 @@
 			}
 			?>
       <div class="dates">
-        <?php 
+        <?php
           $paint_dates = get_field('paint_dates');
           foreach ($paint_dates as $key => $paint_date) :
             $date = $paint_date['date'];
             $location = $paint_date['location'];
             $images = $paint_date['images'];
-        ?>
+			?>
           <div class="info">
             <p class="date"><?php echo $date; ?></p>
             <p class="location"><?php echo $location[0]->name; ?></p>
           </div>
-          <div class="carousel" data-flickity='{ "lazyLoad": true, "percentPosition": false }'>
+          <div class="grid">
             <?php foreach ($images as $image) :?>
-              <div class="image"><?php echo wp_get_attachment_image($image['image'], 'thumbnail'); ?></div>
+              <div class="module"><?php echo wp_get_attachment_image($image['image'], 'thumbnail'); ?></div>
             <?php endforeach; ?>
           </div>
-        <?php
+			<?php
           endforeach;
         ?>
         </div>
