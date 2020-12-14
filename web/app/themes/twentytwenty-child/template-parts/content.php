@@ -39,27 +39,37 @@
       <div class="dates">
         <?php
           $paint_dates = get_field('paint_dates');
-          foreach ($paint_dates as $key => $paint_date) :
+        foreach ($paint_dates as $key => $paint_date) :
             $date = $paint_date['date'];
             $location = $paint_date['location'];
             $images = $paint_date['images'];
-			?>
+            ?>
           <div class="info">
             <p class="date"><?php echo $date; ?></p>
             <p class="location"><?php echo $location[0]->name; ?></p>
           </div>
-          <div class="grid">
+          <div class="" data-flickity='{ "adaptiveHeight": true }'>
             <?php foreach ($images as $image) :?>
-              <div class="module"><?php echo wp_get_attachment_image($image['image'], 'thumbnail'); ?></div>
+              <div class="module">
+                <figure>
+                  <?php echo wp_get_attachment_image($image['image'], 'paa-thumb'); ?>
+                  <figcaption>
+                    <?php echo basename(get_attached_file($image['image'])); ?>
+                    <div>
+                      <input type="checkbox" id="<?php echo $image['image']; ?>" label="Keep" />
+                      <label for="<?php echo $image['image']; ?>">Keep</label>
+                      <textarea name="notes" id="<?php echo $image['image'], '_notes'; ?>" cols="30" rows="5"></textarea>
+                    </div>
+                  </figcaption>
+                </figure>
+							</div>
             <?php endforeach; ?>
           </div>
-			<?php
-          endforeach;
-        ?>
+          <?php endforeach; ?>
         </div>
-		</div><!-- .entry-content -->
+    </div><!-- .entry-content -->
 
-	</div><!-- .post-inner -->
+  </div><!-- .post-inner -->
 
 	<div class="section-inner">
 		<?php

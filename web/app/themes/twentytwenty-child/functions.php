@@ -9,6 +9,12 @@
     wp_enqueue_script('flickity-script', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js', array(), null);
   }
 
+  add_action('after_theme_setup', 'paa_setup');
+function paa_setup()
+{
+    add_image_size('paa-thumb', 300);
+}
+
   function write_log( $log )
   {
       if ( is_array( $log ) || is_object( $log ) ) {
