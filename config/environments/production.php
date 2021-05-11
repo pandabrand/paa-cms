@@ -13,4 +13,4 @@ use function Env\env;
 
 Config::define('WP_DEBUG', true);
 Config::define('WP_DEBUG_LOG', true);
-Config::define('WP_MEMORY_LIMIT', '512M');
+Config::define('WP_MEMORY_LIMIT', '1024M');
