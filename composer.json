@@ -100,7 +100,8 @@
     "frederickwells/pleinair-fww":"0.0.3",
     "wpai/wp-all-import-pro":"4.6.5",
     "wpai/wpai-acf-add-on":"3.2.9",
-    "wpackagist-plugin/do-spaces-sync":"2.2.1"
+    "wpackagist-plugin/do-spaces-sync":"2.2.1",
+    "wpackagist-plugin/query-monitor":"3.6.8"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.5.6",
