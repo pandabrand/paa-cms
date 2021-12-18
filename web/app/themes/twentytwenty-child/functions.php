@@ -23,3 +23,10 @@ function paa_setup()
           error_log( $log );
       }
   }
+
+function up_the_max()
+{
+    return 150;
+}
+
+add_filter('graphql_connection_max_query_amount', 'up_the_max');
